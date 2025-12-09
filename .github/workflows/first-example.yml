@@ -9,6 +9,7 @@ jobs:
             - name: Run commands
               run: |
                 echo "My first Github Actions Jobs"
+                pwd
                 ls -ltra
                 cat ../README.md
 
