@@ -11,6 +11,7 @@ jobs:
                 echo "My first Github Actions Jobs"
                 pwd
                 ls -ltra
+                ls -ltra ../../
                 cat ../README.md
 
             - name: Generate ASCII Artwork
