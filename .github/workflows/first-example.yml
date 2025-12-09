@@ -6,9 +6,15 @@ jobs:
     first_job:
         runs-on: ubuntu-latest
         steps:
-            - name: Welcome message
-              run: echo "My first Github Actions Jobs"
+            - name: Run commands
+              run: |
+                echo "My first Github Actions Jobs"
+                ls -ltra
+                cat README.md
 
+            - name: Generate ASCII Artwork
+              run: cowsay -f dragon "Run for cover, I am a DRAGON... RAWR" >> dragon.txt
+ 
             - name: Checkout repo
               uses: actions/checkout@v6
 
