@@ -12,6 +12,9 @@ jobs:
       - name: Execute Cowsay CMD
         run: cowsay -f dragon "Run for cover, I am a DRAGON...RAWR" >> dragon.txt
 
+      - name: List repo files
+        run: ls -lrta
+
       - name: Sleep for 30 seconds
         run: sleep 30
 
@@ -24,9 +27,6 @@ jobs:
 
       - name: Test file exists
         run: grep -i "dragon" dragon.txt
-
-      - name: List repo files
-        run: ls -lrta
 
     deploy_job_3:
       needs: test_job_2
