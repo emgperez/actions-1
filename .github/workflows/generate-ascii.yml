@@ -25,6 +25,9 @@ jobs:
       - name: Test file exists
         run: grep -i "dragon" dragon.txt
 
+      - name: List repo files
+        run: ls -lrta
+
     deploy_job_3:
       needs: test_job_2
       runs-on: ubuntu-latest
