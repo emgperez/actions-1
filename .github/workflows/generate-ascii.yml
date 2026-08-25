@@ -25,6 +25,9 @@ jobs:
       - name: Sleep for 10 seconds
         run: sleep 10
 
+      - name: List repo files
+        run: ls -lrta
+
       - name: Test file exists
         run: grep -i "dragon" dragon.txt
 
@@ -32,6 +35,9 @@ jobs:
       needs: test_job_2
       runs-on: ubuntu-latest
       steps:
+      - name: List repo files
+        run: ls -lrta
+        
       - name: Read file
         run: cat dragon.txt
 
